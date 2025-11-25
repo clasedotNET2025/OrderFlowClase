@@ -4,6 +4,7 @@ using OrderFlowClase.API.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -26,7 +27,7 @@ builder.Services.AddApiVersioning(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
-//builder.AddNpgsqlDbContext<MyAppContext>("identitydb");
+builder.AddNpgsqlDbContext<MyAppContext>("identitydb");
 
 var app = builder.Build();
 
